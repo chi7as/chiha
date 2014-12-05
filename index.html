@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Christmas - MT</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<link href="css/font.css" rel="stylesheet">
+		<link href="css/jquery.countdown.css" rel="stylesheet">
+		<link rel="image_src" href="thumbnail.png" />
+		<link rel="icon" type="image/ico" href="favicon.ico">
+		<script src="cordova.js"></script>
+
+	</head>
+	<body>
+		<div class="top">
+			<div class="container"> 
+				<div class="row">
+					<a href="#" id="audio-controls" class="play">pause</a>
+					<div class="span12">
+						<!-- <a href="http://themeforest.net/item/superawesome-retina-bootstrap-app-landing-page/3597882?ref=awerest" rel="next" title="Visit online store" data-placement="bottom"><img src="img/iphone.png" alt=""></a> -->
+						<h2>Hello MT, Christmas is coming.</h2>
+						<h1>Making Wishes Come True</h1>
+					</div>
+
+					<div class="span12">
+						<img src="img/calendarchristmas-120px.png"/>
+					</div>
+					<div class="span12">
+
+						<h2>this christmas will be different.</h2>
+						<h2>Every week you will receive a small gift.</h2>
+						<h2>All you have to do is to guess the location and the gift.</h2>
+					</div>
+					<div class="span6 margin5 offset3">
+						<h2>Your final Christmas gift in:</h2>
+						<div class="margin5" id="countdown"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!--break-->
+		<div class="footer">
+			<div class="container"> 
+				<div class="row margin5 margin-10">
+					<div class="span12">
+						<a href="https://www.facebook.com/marietherese.germanos" target="_blank"><img src="img/facebook_icon.png" alt=""></a>
+						<a href="http://www.instagram.com/marietheresegermanos" target="_blank"><img src="img/instagram_icon.png" alt=""></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<audio controls="controls" autoplay="autoplay" loop="loop" id="audio">
+			<source src="img/christmas_song.mp3" type="audio/mp3">
+			<source src="img/christmas_song.ogg" type="audio/ogg">
+		</audio>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.plugin.min.js"></script>
+	<script src="js/jquery.countdown.min.js"></script>
+	<script src="js/player.js"></script>
+	<script src="js/snowstorm.js"></script>
+	<script type="text/javascript">$("[rel=next]").tooltip();</script>
+	<script type="text/javascript">
+	$(function () {
+		var austDay = new Date();
+		austDay = new Date(austDay.getFullYear() + 1, 1 - 1, - 7);
+		$('#countdown').countdown({until: austDay});
+		$('#year').text(austDay.getFullYear());
+	});
+	</script>
+	</body>
+</html>
